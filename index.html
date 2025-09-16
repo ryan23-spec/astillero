@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawsome.com/a2e0a6d6d1.js" crossorigin="anonymous"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="min-h-screen bg-gray-100 flex flex-col">
+        <header class="bg-white shadow">
+            <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+                <img src="download (2).webp" alt="" class="h-20 w-20 rounded-full">
+                <h1 class="text-3xl font-bold text-gray-900">Ryan Jhay D. Astillero</h1>
+                <nav>
+                    <ul class="flex space-x-4">
+                        <li><a href="#Home" class="text-gray-700 hover:text-gray-900">home</a></li>
+                        <li><a href="#about" class="text-gray-700 hover:text-gray-900">About</a></li>
+                        <li><a href="#projects" class="text-gray-700 hover:text-gray-900">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-700 hover:text-gray-900">Contact</a></li>
+                    </ul>
+                </nav>
+                <button id="menu-btn" class="md:hidden focus:outline-none text-2xl">☰</button>
+            </div>
+        </header>
+        <main class="pt-20 container mx-auto p-6">
+
+    <!-- Home -->
+    <section id="home" class="section active">
+      <h2 class="text-4xl font-bold mb-4">Welcome</h2>
+      <div class="w-32  h-32 mx-auto mb-6 bg-gray-300 rounded-fullflex"><img src="OIP.webp" alt=""></div>
+      <p class="text-lg mb-6">Welcome to my portfolio! I’m passionate about design, creativity, and technology. 
+    Here you’ll find some of my projects, from web development to creative works like 
+    graphics and event contributions. Feel free to explore and see what I’ve been working on.</p>
+    </section>
+    <!-- About -->
+    <section id="about" class="section hidden">
+      <h2 class="text-4xl font-bold mb-4 text-center">About Me</h2>
+      <p class="text-lg mb-6 max-w-3xl mx-auto">I am a passionate web developer with experience in building dynamic and responsive websites. I love coding and continuously learning new technologies to improve my skills.</p>
+      <div class="w-full h-64 bg-gray-300 rounded-lg mb-6 ">
+                <h3 class="text-2xl font-bold mb-2">Skills</h3>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>React, Vue.js</li>
+                    <li>Node.js, Express</li>
+                    <li>Python, Django</li>
+                    <li>Database Management (MySQL, MongoDB)</li>
+                </ul>
+                <h3 class="text-2xl font-bold mb-2">work experience</h3>
+                <ul class="list-disc list-inside text-gray-700 mb-4 flex-col space-y-2 ">
+                    <li>Web Developer at XYZ Company (2022 - Present)</li>
+                    <li>Intern at ABC Tech (2021 - 2022)</li>
+                </ul>
+      </div>
+      <a href="#projects" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600">View My Projects</a>
+    </section>
+    <!-- Projects -->
+    <section id="projects" class="section hidden">
+      <h2 class="text-4xl font-bold mb-4 text-center">My Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div class="bg-white p-4 rounded-lg shadow">
+          <div class="w-full h-40 bg-gray-300 rounded-lg mb-4"></div>
+          <h3 class="text-xl font-bold mb-2">Project 1</h3>
+          <p class="text-gray-700">A brief description of Project 1.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <div class="w-full h-40 bg-gray-300 rounded-lg mb-4"></div>
+          <h3 class="text-xl font-bold mb-2">Project 2</h3>
+          <p class="text-gray-700">A brief description of Project 2.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <div class="w-full h-40 bg-gray-300 rounded-lg mb-4"></div>
+          <h3 class="text-xl font-bold mb-2">Project 3</h3>
+          <p class="text-gray-700">A brief description of Project 3.</p>
+        </div>
+      </div>
+      <a href="#contact" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600">Get in Touch</a>
+    </section>
+    <!-- Contact -->
+    <section id="contact" class="section hidden">
+      <h2 class="text-4xl font-bold mb-4 text-center">Contact Me</h2>
+      <form class="max-w-2xl mx-auto">
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2" for="name">Name</label>
+          <input class="w-full p-3 border border-gray-300 rounded-lg" type="text" id="name" placeholder="Your Name">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2" for="email">Email</label>
+          <input class="w-full p-3 border border-gray-300 rounded-lg" type="email" id="email" placeholder="Your Email">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2" for="message">Message</label>
+          <textarea class="w-full p-3 border border-gray-300 rounded-lg" id="message" rows="5" placeholder="Your Message"></textarea>
+        </div>
+        <button class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+        <footer class="bg-white shadow mt-auto">
+            <div class="container mx-auto px-4 py-6 text-center text-gray-600">
+                &copy; 2024 Ryan Jhay D. Astillero. All rights reserved.
+            </div>
+        </footer>
+    </div>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.querySelector('nav ul');
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+        });
+
+        const sections = document.querySelectorAll('.section');
+        const navItems = document.querySelectorAll('nav ul li a');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = item.getAttribute('href').substring(1);
+                sections.forEach(section => {
+                    if (section.id === targetId) {
+                        section.classList.remove('hidden');
+                        section.classList.add('active');
+                    } else {
+                        section.classList.add('hidden');
+                        section.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
